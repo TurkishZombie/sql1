@@ -1,5 +1,5 @@
 SELECT COUNT (*)
 FROM (SELECT userId, COUNT(*)
-	    FROM i_user_login_logs
+      FROM i_user_login_logs
       GROUP BY userId
       HAVING COUNT(*)>3;)
