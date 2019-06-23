@@ -1,5 +1,5 @@
-SELECT COUNT (*)
+SELECT COUNT(*)
 FROM (SELECT userId, COUNT(*) AS Counter
-      FROM i_user_login_logs
-      GROUP BY userId)
-HAVING Counter>3;     
+	  FROM i_user_login_logs
+      GROUP BY userId) AS Counted
+WHERE Counter>3;      
